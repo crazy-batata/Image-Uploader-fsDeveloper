@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+.Container-comp {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.UrlBox-comp {
+  padding: 2px 2px 2px 7px;
+  border: solid 1px #E0E0E0;
+  border-radius: 8px;
+}
+.UrlBox-comp input {
+  outline: none;
+  border: none;
+  margin-right: 14px;
+  width: calc(100% - 88px);
+}
+.UrlBox-comp button {
+  float: right;
+  height: 100%;
+  width: 74px;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.display-none {
+  display: none !important;
+}
+
+#App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+#App .main-container {
+  width: 402px;
+  height: 469px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#App .main-container header {
+  margin-bottom: 29.6px;
+}
+#App .main-container header h1 {
+  font-size: 18px;
+  color: #4F4F4F;
+  font-weight: 100;
+  margin-bottom: 16px;
+}
+#App .main-container header p {
+  font-size: 10px;
+  color: #828282;
+}
+#App .main-container .img-drop-down {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%2397BEF4FF' stroke-width='2' stroke-dasharray='9.9' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 12px;
+  align-self: center;
+  width: 338px;
+  height: 218.9px;
+  box-shadow: none;
+  padding: 36px;
+  margin-bottom: 19px;
+}
+#App .main-container .img-drop-down img {
+  margin-bottom: 37px;
+}
+#App .main-container .img-drop-down p {
+  font-size: 12px;
+  color: #BDBDBD;
+  line-height: 0;
+}
+#App .main-container .drag-enter {
+  background-color: #cccccc5e;
+}
+#App .main-container footer p {
+  font-size: 12px;
+  color: #BDBDBD;
+  margin-bottom: 21.6px;
+}
+#App .main-container footer button {
+  width: 101px;
+  height: 32px;
+}
+#App .loading-bar {
+  width: 400px;
+  height: 143.6px;
+  align-self: center;
+  padding: 36px 27px 43.8px 32px;
+}
+#App .loading-bar h1 {
+  font-size: 18px;
+  color: #4F4F4F;
+  font-weight: 100;
+  margin-bottom: 30.7px;
+}
+#App .loading-bar .bar {
+  width: 340.7px;
+  height: 6px;
+  background: #F2F2F2;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+#App .loading-bar .bar .moving-part {
+  width: 100.9px;
+  height: 6px;
+  border-radius: 8px;
+  background: #2F80ED;
+  position: absolute;
+}
+@keyframes move-loading-bar {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 340px;
+  }
+}
+#App .play-loading-anim .moving-part {
+  animation-name: move-loading-bar;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+#App .img-preview {
+  width: 400px;
+  height: 455px;
+  border-radius: 12px;
+  align-self: center;
+  padding: 33px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#App .img-preview .grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  margin-bottom: 11px;
+}
+#App .img-preview .grid-container .back-btn {
+  cursor: pointer;
+}
+#App .img-preview p {
+  font-size: 18px;
+  color: #4F4F4F;
+  margin-bottom: 25px;
+}
+#App .img-preview .img-container {
+  width: 338px;
+  height: 224px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+#App .img-preview .img-container img {
+  height: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+}
+#App .img-preview .url-container {
+  width: 338px;
+  height: 36px;
+}
+#App .img-preview .url-container input {
+  font-size: 10px;
+  color: #4F4F4F;
+}
+#App .img-preview .url-container button {
+  font-size: 10px;
+}
+#App .btn {
+  background: #2F80ED;
+  color: white;
+  border: transparent;
+  font-size: 12px;
+  border-radius: 8px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=App.css.map */
