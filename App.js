@@ -31,7 +31,7 @@ function App() {
     URL.revokeObjectURL(file.img);
 
     setAppState("start");
-    setDragEvent("leave");
+    setDragEvents("leave");
   }
 
   return (
