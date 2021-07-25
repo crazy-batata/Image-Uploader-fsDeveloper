@@ -11,9 +11,14 @@ function App() {
   const [appState,setAppState] = useState("start");
   const [file , setFile] = useState({});
   const [dragEvents,setDragEvents] = useState("leave"); 
+  const {getRootProps,getInputProps,open} = useDropzone({
+    accept:"image/*",
+    onDragEnter:()=>{setDragEvents("enter");},
+    onDragLeave:()=>{setDragEvents("leave");},
+    onDrop:onDropFile,
+  });
 
   function onDropFile(file){
-    URL.revokeObjectURL(file.img);
     setFile({
       img:URL.createObjectURL(file[0]),
     });
@@ -22,12 +27,12 @@ function App() {
       setAppState("show");
     },500)
   }
-  const {getRootProps,getInputProps,open} = useDropzone({
-    accept:"image/*",
-    onDragEnter:()=>{setDragEvents("enter");},
-    onDragLeave:()=>{setDragEvents("leave");},
-    onDrop:onDropFile,
-  });
+  function backToStart(){
+    URL.revokeObjectURL(file.img);
+
+    setAppState("start");
+    setDragEvent("leave");
+  }
 
   return (
     <div id="App">
@@ -51,7 +56,7 @@ function App() {
         <LoadingBar customClass={`loading-bar ${appState === "loading" ? "play-loading-anim" :"display-none"}`}></LoadingBar>
         <Container customClass={`img-preview ${appState === "show"? "" : "display-none"}`}>
           <div className="grid-container">
-            <img src={backImg} alt="" width="35px" className="back-btn" onClick={()=>{setAppState("start")}}/>
+            <img src={backImg} alt="" width="35px" className="back-btn" onClick={backToStart}/>
             <img src={successImg} alt="" width="35px"/>
           </div>
           <p>Uploaded Successfully!</p>
